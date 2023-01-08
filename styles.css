@@ -1,0 +1,22 @@
+.container{
+  width: 40%; 
+}
+
+.divRow{    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    color: chartreuse;
+}
+
+.divCell{
+    border:solid;
+    border-width: 0.5px;
+    border-color: black;
+    height: auto;
+    width: auto;
+    background-color: red;
+    flex-grow: 2;
+    aspect-ratio: 1;
+}
