@@ -20,3 +20,11 @@
     flex-grow: 2;
     aspect-ratio: 1;
 }
+
+input{
+  margin-bottom: 20px;
+}
+
+button{
+  display: block;
+}
