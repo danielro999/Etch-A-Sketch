@@ -1,9 +1,15 @@
+body{
+  background: linear-gradient(45deg, red, blue, green);
+}
+
 h1{
   text-align: center;
 }
 
 .container{
   width: 500px;
+  border-style: solid;
+
 }
 
 .divRow{    
@@ -20,19 +26,23 @@ h1{
   border-color: black;
   height: auto;
   width: auto;
-  background-color: red;
+  /* background-color: red; */
   flex-grow: 2;
-    aspect-ratio: 1;
-  }
+  aspect-ratio: 1;
+}
   
-  .contenedor{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.contenedor{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
   
 input{
   margin-bottom: 20px;
+}
+
+#input{
+  font-size: large;
 }
 
 .buttons{
@@ -40,8 +50,35 @@ input{
   margin: 50px;
 }
 
+button{
+  width: 100%;
+  border-radius: 15px;
+  background-color: blueviolet;
+}
+
+button:active
+{
+  background-color: black;
+  color: white;
+}
+
 button, .color{
+  height: 50px;
   display: block;
-  margin: 40% 0;
+  margin: 30% 0;
+  font-size: large;
+  
+}
+
+.color input{
+  display: block;
+  margin: 10% 0;
+}
+
+.color label{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+#blocks{
   font-size: large;
 }

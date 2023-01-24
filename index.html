@@ -11,26 +11,33 @@
     <h1>Etch-a-Sketch</h1>
 
     <div class="contenedor">
+
         <div class="buttons">
+
             <div class="color">
-                <input type="color" id="background_color">
                 <label for="background_color">Backgroung color</label>
+                <input type="color" id="background_color" value="#606060">
             </div>
             
             <div class="color">
-                <input type="color" id="front_color">
                 <label for="front_color">New Color</label>
+                <input type="color" id="front_color" value="#FEF600">
             </div>
 
-            <button>Random color</button>
-            <button>Black</button>
+            <button onclick="randomColor(getRandomColor())">Random color</button>
+            <button onclick="sha(shadowToggle())" id="btnShadow">Shading</button>
             <button onclick="reset()">Reset</button>
+
         </div>
+
         <div id="blocks">
+
             <h3>Blocks</h3>
             <input type="number" min="4" max="100" id="input" name="input" value=16>
             <label for="input" id="label_input" name="label_input">label</label>
+
         </div>
+
     </div>
 
 <script src="./main.js"></script>
