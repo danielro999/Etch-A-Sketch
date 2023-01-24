@@ -12,14 +12,23 @@
 
     <div class="contenedor">
         <div class="buttons">
-            <button>Color</button>
+            <div class="color">
+                <input type="color" id="background_color">
+                <label for="background_color">Backgroung color</label>
+            </div>
+            
+            <div class="color">
+                <input type="color" id="front_color">
+                <label for="front_color">New Color</label>
+            </div>
+
             <button>Random color</button>
             <button>Black</button>
             <button onclick="reset()">Reset</button>
         </div>
         <div id="blocks">
             <h3>Blocks</h3>
-            <input type="number" min="4" max="100" id="input" name="input">
+            <input type="number" min="4" max="100" id="input" name="input" value=16>
             <label for="input" id="label_input" name="label_input">label</label>
         </div>
     </div>

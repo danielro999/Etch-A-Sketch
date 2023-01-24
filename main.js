@@ -1,4 +1,4 @@
-const input = document.getElementsByTagName("input")[0]
+const input = document.getElementsByTagName("input")[2]
 const label_input = document.getElementById("label_input")
 const blocks = document.getElementById("blocks")
 
@@ -10,7 +10,7 @@ function createContainer(){
 }
 
 function createDivs(container,numbGrid = 16){
-    label_input.innerText = `${numbGrid} X ${numbGrid}`
+    label_input.innerText = `${numbGrid}X${numbGrid}`
     for (let i = 0; i < numbGrid  ; i++) {
         const divRow = document.createElement("div")
         divRow.classList.add("divRow")

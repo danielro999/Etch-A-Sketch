@@ -1,31 +1,36 @@
+h1{
+  text-align: center;
+}
+
 .container{
-  width: 400%; 
+  width: 500px;
 }
 
 .divRow{    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    color: chartreuse;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  color: chartreuse;
 }
 
 .divCell{
-    border:solid;
-    border-width: 0.5px;
-    border-color: black;
-    height: auto;
-    width: auto;
-    background-color: red;
-    flex-grow: 2;
+  border:solid;
+  border-width: 0.5px;
+  border-color: black;
+  height: auto;
+  width: auto;
+  background-color: red;
+  flex-grow: 2;
     aspect-ratio: 1;
-}
-
-.contenedor{
-  display: flex;
-  width: 100%;
-}
-
+  }
+  
+  .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
 input{
   margin-bottom: 20px;
 }
@@ -35,7 +40,8 @@ input{
   margin: 50px;
 }
 
-button{
+button, .color{
   display: block;
- margin: 50% 0;
+  margin: 40% 0;
+  font-size: large;
 }
