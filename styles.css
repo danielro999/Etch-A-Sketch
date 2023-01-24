@@ -1,5 +1,5 @@
 .container{
-  width: 40%; 
+  width: 400%; 
 }
 
 .divRow{    
@@ -21,10 +21,21 @@
     aspect-ratio: 1;
 }
 
+.contenedor{
+  display: flex;
+  width: 100%;
+}
+
 input{
   margin-bottom: 20px;
 }
 
+.buttons{
+  align-self: center;
+  margin: 50px;
+}
+
 button{
   display: block;
+ margin: 50% 0;
 }
