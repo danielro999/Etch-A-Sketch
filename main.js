@@ -12,21 +12,17 @@ function createContainer(){
     return container
 }
 
-function shadowToggle(){
-    return shading ? shading = false : shading = true
-}
-
-function sha(bolean){
+function btnshading(){
     const btnShadow = document.getElementById("btnShadow")
-    if (bolean){
+    shading ? shading = false : shading = true
+    if (shading){
         btnShadow.style.backgroundColor = "black"
         btnShadow.style.color = "white"}
     else{
         btnShadow.style.backgroundColor = "blueviolet"
         btnShadow.style.color = "black"}
+    return shading
 }
-
-
 
 function createDivs(container,numbGrid = 16){
     label_input.innerText = `${numbGrid}X${numbGrid}`
@@ -38,13 +34,24 @@ function createDivs(container,numbGrid = 16){
             const divCell = document.createElement("div")
             divCell.style.backgroundColor = backgroundColor.value
             divCell.onmouseover = function() { 
-                divCell.style.backgroundColor = front_color.value
+                if (shading){   
+                    cellShading(divCell)
+                }
+                else{
+                    divCell.style.backgroundColor = front_color.value
+                    divCell.style.filter = "brightness(1)"
+                }
                 divCell.style.transition = "0.5s"
             };
             divCell.classList.add("divCell")
             divRow.appendChild(divCell)
         }
     }
+}
+
+function cellShading(divCell){
+    let color = divCell.style.backgroundColor
+    divCell.style.filter += "brightness(80%)" 
 }
 
 function reset(){
@@ -65,11 +72,19 @@ function randomColor(color){
     changeBackGrounColor(color)
     changeFrontColor()
 }
+function randomColorB(color){
+    changeBackGrounColor(color)
+}
+
+function randomColorF(color){
+    changeFrontColor()
+}
 
 function changeBackGrounColor(color = backgroundColor.value){
     let divCell = document.getElementsByClassName("divCell")
     for (let i = 0; i < divCell.length; i++) {  
-        divCell[i].style.backgroundColor = color;    
+        divCell[i].style.backgroundColor = color; 
+        divCell[i].style.filter = "brightness(1)"   
     }
     backgroundColor.value = color
 }
@@ -78,11 +93,10 @@ function changeFrontColor(){
     front_color.value = getRandomColor()
 }
 
-input.addEventListener("keypress", ()=>{
-    if (event.key === "Enter") {  
-        document.getElementsByClassName("container")[0].remove()  
-        createDivs(createContainer(), input.value)
-    }  
+input.addEventListener("input", ()=>{
+      
+    document.getElementsByClassName("container")[0].remove()  
+    createDivs(createContainer(), input.value)
 })
 
 backgroundColor.addEventListener("input",()=> changeBackGrounColor())

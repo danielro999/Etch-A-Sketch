@@ -16,16 +16,22 @@
 
             <div class="color">
                 <label for="background_color">Backgroung color</label>
-                <input type="color" id="background_color" value="#606060">
+                <div>
+                    <input type="color" id="background_color" value="#606060"  style="display: inline;">
+                    <button onclick="randomColorB(getRandomColor())"  style="display: inline;" class="btnRandon" >Random </button>
+                </div>
             </div>
             
             <div class="color">
-                <label for="front_color">New Color</label>
-                <input type="color" id="front_color" value="#FEF600">
+                <label for="front_color">Pen Color</label>
+                <div>
+                    <input type="color" id="front_color" value="#FEF600"  style="display: inline;">
+                    <button onclick="randomColorF(getRandomColor())" style="display: inline;" class="btnRandon">Random </button>
+                </div>
             </div>
 
-            <button onclick="randomColor(getRandomColor())">Random color</button>
-            <button onclick="sha(shadowToggle())" id="btnShadow">Shading</button>
+            <button onclick="randomColor(getRandomColor())">Random colors</button>
+            <button onclick="btnshading()" id="btnShadow">Shading</button>
             <button onclick="reset()">Reset</button>
 
         </div>
@@ -33,7 +39,7 @@
         <div id="blocks">
 
             <h3>Blocks</h3>
-            <input type="number" min="4" max="100" id="input" name="input" value=16>
+            <input type="range" min="4" max="100" id="input" name="input" value=16>
             <label for="input" id="label_input" name="label_input">label</label>
 
         </div>
